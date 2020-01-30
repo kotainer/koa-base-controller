@@ -1,8 +1,8 @@
 {
   "name": "@kotainer/koa-base-controller",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Base Koa controller",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "tsc && tsc -d --declarationDir lib --declarationMap --emitDeclarationOnly",
     "prepare" : "npm run build",
@@ -27,6 +27,7 @@
     "@types/koa": "^2.11.0",
     "@types/koa-bodyparser": "^4.3.0",
     "@types/mongoose": "^5.7.0",
+    "ts-node": "^8.6.1",
     "moment": "^2.24.0"
   }
 }
