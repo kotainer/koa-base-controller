@@ -1,0 +1,32 @@
+{
+  "name": "@kotainer/koa-base-controller",
+  "version": "1.0.0",
+  "description": "Base Koa controller",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && tsc -d --declarationDir lib --declarationMap --emitDeclarationOnly",
+    "prepare" : "npm run build",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kotainer/koa-base-controller.git"
+  },
+  "keywords": [
+    "koa",
+    "controller"
+  ],
+  "author": "Butkov Viktor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kotainer/koa-base-controller/issues"
+  },
+  "homepage": "https://github.com/kotainer/koa-base-controller#readme",
+  "dependencies": {
+    "@types/koa": "^2.11.0",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/mongoose": "^5.7.0",
+    "moment": "^2.24.0"
+  }
+}

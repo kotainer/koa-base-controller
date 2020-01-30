@@ -1,0 +1,21 @@
+{
+    "version": "3.7.4",
+    "compilerOptions": {
+        "outDir": "./lib",
+        "lib": ["ES2019"],
+        "target": "ES2019",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "types": [
+            "koa-bodyparser"
+        ]
+    },
+    "include": ["./src/**/*"]
+}
