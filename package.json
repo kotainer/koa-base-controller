@@ -1,11 +1,11 @@
 {
   "name": "@kotainer/koa-base-controller",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Base Koa controller",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc && tsc -d --declarationDir lib --declarationMap --emitDeclarationOnly",
-    "prepare" : "npm run build",
+    "prepare": "npm run build",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },

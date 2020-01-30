@@ -4,6 +4,7 @@ import { Context } from 'koa';
 import { IModelFieldTypes } from './interfaces/model-field.type';
 import { Model } from 'mongoose';
 
+export { IModelFieldTypes };
 export class KoaBaseController<T extends Model<any>> {
     constructor(
         protected readonly model: T,
