@@ -27,6 +27,18 @@ export class KoaBaseController<T extends Model<any>> {
     };
 
     /**
+     * Создание нового элемента без завершения запроса
+     */
+    public async simplyCreate(ctx: Context): Promise<T> {
+        const item = await this.model.create({
+            createdAt: new Date().getTime(),
+            ...ctx.request.body,
+        });
+
+        return item;
+    };
+
+    /**
      * Удаление элемента
      * @param {String} id идентификатор объекта
      */
