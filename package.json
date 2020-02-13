@@ -1,6 +1,6 @@
 {
   "name": "@kotainer/koa-base-controller",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Base Koa controller",
   "main": "lib/index.js",
   "scripts": {
