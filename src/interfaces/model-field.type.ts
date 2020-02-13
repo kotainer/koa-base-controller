@@ -1,6 +1,6 @@
 export interface IModelFieldTypes {
     fields: string[];
-    showFields?: [],
+    showFields?: string[],
     sort: string;
     countLimit: number;
     extendQuery : {};
