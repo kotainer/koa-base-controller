@@ -69,8 +69,11 @@ export class KoaBaseController<T extends Model<any>> {
     public async show(ctx: Context) {
         const item = await this.model
             .findById(ctx.params.id)
-            .select(this.types.fields)
-            .populate(this.types.populate)
+            .select([
+                ...this.types.fields,
+                ...this.types.showFields || []
+            ])
+            .populate(this.types.populate + this.types.showPopulate || '')
             .lean();
 
         ctx.body = {
