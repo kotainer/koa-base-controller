@@ -76,6 +76,13 @@ export class KoaBaseController<T extends Model<any>> {
             .populate(this.types.populate + this.types.showPopulate || '')
             .lean();
 
+        if (!item) {
+            throw {
+                status: 404,
+                message: 'Элемента с таким идентификатором не существует',
+            }
+        }
+
         ctx.body = {
             result: true,
             data: {
@@ -247,7 +254,7 @@ export class KoaBaseController<T extends Model<any>> {
                 this.normalizeQueryField(query, key);
             }
         });
-
+        console.log(query);
         return query;
     }
 
