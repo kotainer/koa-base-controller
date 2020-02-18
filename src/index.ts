@@ -121,7 +121,7 @@ export class KoaBaseController<T extends Model<any>> {
         if (ctx.extendQuery) {
             query = {
                 ...query,
-                ...this.types.extendQuery,
+                ...ctx.extendQuery,
             };
         }
 
@@ -181,7 +181,7 @@ export class KoaBaseController<T extends Model<any>> {
         if (ctx.extendQuery) {
             query = {
                 ...query,
-                ...this.types.extendQuery,
+                ...ctx.extendQuery,
             };
         }
 
