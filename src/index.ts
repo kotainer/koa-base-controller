@@ -131,7 +131,10 @@ export class KoaBaseController<T extends Model<any>> {
 
         const itemsList = await this.model
             .find(query)
-            .select(this.types.fields)
+            .select([
+                ...this.types.fields,
+                ...ctx.extendFields || []
+            ])
             .populate(this.types.populate)
             .sort(sort.toString())
             .skip(skip)
@@ -192,7 +195,10 @@ export class KoaBaseController<T extends Model<any>> {
         const itemsList = await this.model
             .find(query)
             .lean()
-            .select(this.types.fields)
+            .select([
+                ...this.types.fields,
+                ...ctx.extendFields || []
+            ])
             .populate(
                 this.types.populate,
                 this.types.populateSelect,
@@ -254,7 +260,7 @@ export class KoaBaseController<T extends Model<any>> {
                 this.normalizeQueryField(query, key);
             }
         });
-        console.log(query);
+
         return query;
     }
 
